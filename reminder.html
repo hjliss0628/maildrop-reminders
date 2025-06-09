@@ -1,8 +1,15 @@
 <!DOCTYPE html>
 <html>
-<head><title>Reminder</title></head>
-<body>
-  <p>Please remember to add the maildrop address before sending.</p>
-  <button onclick="Office.context.ui.messageParent('proceed')">OK</button>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <script>
+      Office.initialize = () => {
+        Office.context.ui.messageParent("proceed");
+      };
+    </script>
+  </head>
+  <body>
+    <p style="font-family:sans-serif; font-size:16px;">Please remember to add the maildrop address.</p>
+    <button onclick="Office.context.ui.messageParent('proceed')">OK</button>
+  </body>
 </html>
