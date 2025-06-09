@@ -1,25 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="utf-8">
   <title>Maildrop Reminder</title>
-  <meta charset="utf-8"/>
+  <script src="functions.js" defer></script>
   <style>
-    body { font-family: sans-serif; padding: 2em; }
-    #reminder { color: #b94a48; background: #fcf8e3; border: 1px solid #fbeed5; padding: 1em; border-radius: 4px;}
-    button { margin-top: 1em; }
+    body {
+      font-family: sans-serif;
+      padding: 1em;
+      background-color: #fcf8e3;
+      border: 1px solid #fbeed5;
+      border-radius: 4px;
+    }
+    #message {
+      color: #b94a48;
+      font-weight: bold;
+    }
   </style>
 </head>
 <body>
-  <div id="reminder">
-    Don’t forget to add the maildrop address before sending this email!
-  </div>
-  <button onclick="markChecked()">I’ve added it</button>
-
-  <script>
-    function markChecked() {
-      document.getElementById('reminder').innerText = "Maildrop address confirmed. You’re good to go!";
-    }
-    // You can add more JS functions here if needed
-  </script>
+  <div id="message">Reminder: Don’t forget to add the maildrop address before sending this email.</div>
+  <button onclick="markConfirmed()">I’ve added it</button>
 </body>
 </html>
